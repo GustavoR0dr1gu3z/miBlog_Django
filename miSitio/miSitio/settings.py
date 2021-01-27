@@ -55,7 +55,7 @@ ROOT_URLCONF = 'miSitio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'], # Añadiendo la carpeta templates ya creada
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
