@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from apps.miBlog import views # Importando la vista de miBlog
 
 urlpatterns = [
+    path('',views.index, name="index"), # Llamar la funcion que se creo en views
     path('admin/', admin.site.urls),
 ]
