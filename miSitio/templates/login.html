@@ -12,23 +12,26 @@
 <body>
 
     <div class="container">
-        <div class="row col">
-            <H1>LOGIN</H1>         
-            
-            
-            <form action="" method="POST">
-                <div class="form-group">
-                    <label for="username">Usuario</label>
-                    <input type="text" name="username" class="form-control">
-                </div>
+        <div class="row">
+            <div class="col">
+                <H1>LOGIN</H1>         
+                
+                
+                <form action="" method="POST">
+                        {% csrf_token %} <!--Token para que se cree un usuario por forumario-->
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" name="username" class="form-control">
+                    </div>
 
-                <div class="form-group">
-                    <label for="username">Contraseña</label>
-                    <input type="password" name="password" class="form-control">
-                </div>
+                    <div class="form-group">
+                        <label for="username">Contraseña</label>
+                        <input type="password" name="password" class="form-control">
+                    </div>
 
-                <button type="submit" class="btn btn-primary">Ingresar</button>
-            </form>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
+            </div>
         </div>
     </div>
     
