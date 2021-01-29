@@ -33,7 +33,10 @@ def salir(request): # Creando funcion que hace que terminemos la sesion
     messages.success(request, 'Sesion Finalizada')
     return redirect('ingresar')
 
-
+def registrou(request):        
+    return render(request,'registro.html', {
+        
+    })
 
 
 
