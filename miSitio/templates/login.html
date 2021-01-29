@@ -12,6 +12,14 @@
 <body>
 
     <div class="container">
+        {% if messages %}
+            {% for mensaje in messages %}
+                <div class="alert {% if mensaje.tags == 'success' %} alert--success{% else %} alert-danger{% endif %}">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{ mensaje }}
+                </div>
+            {% endfor %}
+        {% endif %}
         <div class="row">
             <div class="col">
                 <H1>LOGIN</H1>         

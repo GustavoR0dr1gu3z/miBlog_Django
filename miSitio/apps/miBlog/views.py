@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect #4.1 .-  se importa redirect, para redireccionar a una pagina si el usuario existe
 from django.contrib.auth import authenticate, login #4.-  Se importa la autenticacion y el login
+from django.contrib import messages #Para mostrar mensajes
 
 # Create your views here.
 def index(request): #Creando una funcion que muestra lo que queremos en la pagina principal
@@ -17,7 +18,10 @@ def ingresar(request): #2.- Ya que creamos la URL, creamos el metodo que le crea
 
         if user: #Si existe el usuario entonces se va a loggear 
             login(request, user)
+            messages.success(request,'Bienvenido {}'.format(user.username)) # Mensaje
             return redirect('index') # Se va a redireccionar a index
+        else:
+            messages.error(request, 'Usuario o Contraseña Incorrecta') # Mensaje
 
     return render(request, 'login.html', {
     
