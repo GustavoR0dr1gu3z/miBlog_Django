@@ -20,27 +20,35 @@
                     {% csrf_token %} <!--Todo formulario debe tener un token-->
                     <!--{{form}} Palabra de la izquierda que se declaro en el archivo forms.py-->
 
-                    <!--ETIQUERAS ORDENADAS EN LISTA-->
+                    {% for campo in form %} <!--Mostrando el formulario -->
+                        <div class="form-group">
+                            {{ campo.label_tag }}
+                            {{ campo }}
+                        </div>
+                        <br>
+                    {% endfor %}
+
+                    <!--ETIQUERAS ORDENADAS EN LISTA
                     <div class="form-group">
                         {{form.username.label_tag}}
                         {{form.username}}
                     </div>
-
+                    <br>
                     <div class="form-group">
                         {{form.email.label_tag}}
                         {{form.email}}
                     </div>
-
+                    <br>
                     <div class="form-group">
                         {{form.password.label_tag}}
                         {{form.password}}
                     </div>                    
-
+                    <br>
                     <div class="form-group">
                         {{form.password2.label_tag}}
                         {{form.password2}}
                     </div>
-
+                    -->
                     <br>                    
                     <button type="submit" class="btn btn-primary">Registrar</button>
 
