@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse, redirect #4.1 .-  se importa redirect, para redireccionar a una pagina si el usuario existe
 from django.contrib.auth import authenticate, login, logout #4.-  Se importa la autenticacion y el login
 from django.contrib import messages #Para mostrar mensajes
+from .forms import RegistroForm # Se importa la clase del archivo ya creado forms.py
+
 
 # Create your views here.
 def index(request): #Creando una funcion que muestra lo que queremos en la pagina principal
@@ -33,9 +35,10 @@ def salir(request): # Creando funcion que hace que terminemos la sesion
     messages.success(request, 'Sesion Finalizada')
     return redirect('ingresar')
 
-def registrou(request):        
+def registrou(request): # Mandamos a llamar la clase que se creo en forms.py 
+    form = RegistroForm() # Instanciamos la clase
     return render(request,'registro.html', {
-        
+        'form':form # Creando variable que tendrá la info de ka instancia
     })
 
 

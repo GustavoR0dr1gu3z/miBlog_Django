@@ -16,6 +16,12 @@
             <div class="col">                
                 <h1>Registro de Usuarios</h1>
                 
+                <form action="POST">
+                    {% csrf_token %} <!--Todo formulario debe tener un token-->
+                    {{form}} <!--Palabra de la izquierda que se declaro en el archivo forms.py-->
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+
+                </form>
                 
             </div>
         </div>
