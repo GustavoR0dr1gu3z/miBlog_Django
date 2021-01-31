@@ -29,6 +29,11 @@ class RegistroForm(forms.Form): # Listos para crear los input del formulario
         if cleaned_data.get('password2') != cleaned_data.get('password'):
             self.add_error('password2', 'La Contraseña no Coincide')
 
-
+    def guardarUsuarios(self):
+        return User.objects.create_user(            
+            self.cleaned_data.get('username'),
+            self.cleaned_data.get('email'),
+            self.cleaned_data.get('password')
+        )
 
 

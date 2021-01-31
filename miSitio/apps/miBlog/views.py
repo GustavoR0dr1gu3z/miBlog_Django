@@ -38,10 +38,11 @@ def salir(request): # Creando funcion que hace que terminemos la sesion
 def registrou(request): # Mandamos a llamar la clase que se creo en forms.py 
     form = RegistroForm(request.POST or None) # Instanciamos la clase
     if request.method == 'POST' and form.is_valid():
-        username = form.cleaned_data.get('username') # Diccionario para que se guarde nuestra info
+        """   username = form.cleaned_data.get('username') # Diccionario para que se guarde nuestra info
         email = form.cleaned_data.get('email') # Diccionario para que se guarde nuestra info
         password = form.cleaned_data.get('password') # Diccionario para que se guarde nuestra info
-        user = User.objects.create_user(username, email, password) # Creando un usuario con los datos obtenidos anteriormente
+        user = User.objects.create_user(username, email, password) # Creando un usuario con los datos obtenidos anteriormente """
+        user = form.guardarUsuarios()
         if user:
             login(request, user)
             messages.success(request, 'Usuario Creado Exítosamente')
