@@ -24,6 +24,11 @@ class RegistroForm(forms.Form): # Listos para crear los input del formulario
             raise forms.ValidationError('Correo Electrónico en Uso')
         return email
 
+    def clean(self):
+        cleaned_data = super().clean() # cleaned_data se ocupa cuando los campos dependen uno del otro
+        if cleaned_data.get('password2') != cleaned_data.get('password'):
+            self.add_error('password2', 'La Contraseña no Coincide')
+
 
 
 
