@@ -3,6 +3,12 @@ from django.contrib.auth.models import User # Clase por defecto que tiene Django
 
 
 class RegistroForm(forms.Form): # Listos para crear los input del formulario
+    first_name = forms.CharField(label = 'Nombre(s)', required = True, min_length = 4, max_length=60, widget=forms.TextInput(attrs={'class': 'form-control',
+                                                                                                            'placeholder': 'Nombre(s)'}))
+
+    last_name = forms.CharField(label = 'Apellidos', required = True, min_length = 4, max_length=90, widget=forms.TextInput(attrs={'class': 'form-control',
+                                                                                                            'placeholder': 'Apellidos'}))
+
     username = forms.CharField(label = 'Nombre de Usuario', required = True, min_length = 4, max_length=60, widget=forms.TextInput(attrs={'class': 'form-control',
                                                                                                             'placeholder': 'Nombre de Usuario'}))
     email = forms.EmailField(label = 'Correo Electrónico', required = True, widget=forms.EmailInput(attrs={'class': 'form-control',
@@ -11,6 +17,8 @@ class RegistroForm(forms.Form): # Listos para crear los input del formulario
                                                                                 'placeholder': 'Password'}))
     password2 = forms.CharField(label = 'Repetir Contraseña', required = True,  widget=forms.PasswordInput(attrs={'class': 'form-control',
                                                                                 'placeholder': 'Repeat Password'}))
+
+
 
     def clean_username(self): # Metodo para validacion 
         username = self.cleaned_data.get('username') # consulta para verificar si existe el nombre de usuario
@@ -33,7 +41,9 @@ class RegistroForm(forms.Form): # Listos para crear los input del formulario
         return User.objects.create_user(            
             self.cleaned_data.get('username'),
             self.cleaned_data.get('email'),
-            self.cleaned_data.get('password')
+            self.cleaned_data.get('password'),
+            first_name = self.cleaned_data.get('first_name'),
+            last_name = self.cleaned_data.get('last_name')
         )
 
 
