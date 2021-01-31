@@ -1,0 +1,26 @@
+{
+  "name": "Autobiografia",
+  "version": "1.0.0",
+  "description": "Autobiografia",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoR0dr1gu3z/Autobiografia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoR0dr1gu3z/Autobiografia/issues"
+  },
+  "homepage": "https://github.com/GustavoR0dr1gu3z/Autobiografia#readme",
+  "dependencies": {
+    "jquery": "^3.5.0"
+  }
+}
