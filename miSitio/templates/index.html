@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,23 +9,23 @@
   <meta content="" name="description">
 
   <!--Se insertó el icono en la parte superior de la página-->
-  <link rel="shortcut icon" href="img/gitkraken.png">
+  <link rel="shortcut icon" href="{% static 'img/gitkraken.png' %}">
 
   <!-- Favicons -->
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
 
 <!--PAGECLIP-->
@@ -250,23 +251,23 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">         
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="img/codemx.jpeg" alt="Third slide" width="500" height="450">
+              <img class="d-block w-100" src="{% static 'img/codemx.jpeg' %}" alt="Third slide" width="500" height="450">
               <h1 class="fotos">CodeMX</h1>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="img/hackUNAM.jpg" alt="First slide" width="10" height="400">
+              <img class="d-block w-100" src="{% static 'img/hackUNAM.jpg' %}" alt="First slide" width="10" height="400">
               <h1 class="fotos">Presentación del Proyecto con mi Equipo en UNAMxHacks</h1>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="img/CF.jpeg" alt="Second slide" width="427" height="445">
+              <img class="d-block w-100" src="{% static 'img/CF.jpeg' %}" alt="Second slide" width="427" height="445">
               <h1 class="fotos">Foto con Uriel de Código Fácilito en UNAMxHacks</h1>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="img/gitkraken.jpg" alt="Third slide" width="10" height="400">
+              <img class="d-block w-100" src="{% static 'img/gitkraken.jpg' %}" alt="Third slide" width="10" height="400">
               <h1 class="fotos">Taller de GitKraken con GloBoards Para Trabajar de Forma Colaborativa </h1>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="img/ibm.jpeg" alt="Fourth slide" width="10" height="450">
+              <img class="d-block w-100" src="{% static 'img/ibm.jpeg' %}" alt="Fourth slide" width="10" height="450">
               <h1 class="fotos">IBM Watson Assistant WorkShop</h1>
             </div>
 
@@ -308,7 +309,7 @@
       <div class="col-md-4">
         <div class="card card-blog">
           <div class="card-img">
-            <a href="https://codemx.org/"><img src="img/code.jpg" alt="" class="img-fluid"></a>
+            <a href="https://codemx.org/"><img src="{% static 'img/code.jpg' %}" alt="" class="img-fluid"></a>
           </div>
           <div class="card-body">
             <div class="card-category-box">
@@ -350,7 +351,7 @@
           <div class="work-box">
             <a href="https://github.com/GustavoR0dr1gu3z/UNAMxHack">
               <div class="work-img">
-                <img src="img/difusion.png" alt="" class="img-fluid">
+                <img src="{% static 'img/difusion.png' %}" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -375,7 +376,7 @@
           <div class="work-box">
             <a href="https://github.com/GustavoR0dr1gu3z/Blender_Espada">
               <div class="work-img">
-                <img src="img/espada.png" alt="" class="img-fluid">
+                <img src="{% static 'img/espada.png' %}" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -399,7 +400,7 @@
             <div class="work-box">
               <a href="https://github.com/GustavoR0dr1gu3z/Detector_Personas_RNN">
                 <div class="work-img">
-                  <img src="img/personas.jpg" alt="" class="img-fluid">
+                  <img src="{% static 'img/personas.jpg' %}" alt="" class="img-fluid">
                 </div>
                 <div class="work-content">
                   <div class="row">
@@ -714,21 +715,21 @@
   <div id="preloader"></div>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/counterup/jquery.waypoints.min.js"></script>
-  <script src="lib/counterup/jquery.counterup.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="lib/typed/typed.min.js"></script>
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/popper/popper.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/jquery.counterup.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+  <script src="{% static 'lib/typed/typed.min.js' %}"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="{% static 'contactform/contactform.js' %}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
 
 <!--PAGECLIP-->
