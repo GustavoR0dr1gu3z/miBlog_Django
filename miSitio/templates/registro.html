@@ -24,6 +24,9 @@
                         <div class="form-group">
                             {{ campo.label_tag }}
                             {{ campo }}
+                            {% if campo.errors %} <!--Instrucción que validará si tiene errores-->
+                                {{campo.errors}}
+                            {% endif %}
                         </div>
                         <br>
                     {% endfor %}
